@@ -38,3 +38,11 @@ select {
 .pokemon-list-control button { 
     margin-left: 10px; 
 }
+.active {
+    color: red;
+    text-decoration: none;
+}
+.no-active {
+    color: yellow;
+    text-decoration: none;
+}

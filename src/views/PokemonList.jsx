@@ -36,7 +36,7 @@ const PokemonList = () => {
             <option key={index}>{name}</option>
           ))}
         </select>
-        <button className="btn btn-success" onClick={irAlPokemon}>Ir al pokemon</button>
+        <button className="btn btn-success" onClick={irAlPokemon}>Ver Detalle</button>
       </div>
     </div>
   );

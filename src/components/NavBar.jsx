@@ -4,10 +4,11 @@ import Nav from "react-bootstrap/Nav";
 import { Container } from "react-bootstrap";
 import pokeapi from '../img/pokeapi.png'
 
+
 const NavBar = () => {
   const setActiveClass = ({ isActive }) => isActive 
-                                            ? "text-danger mt-2" 
-                                            : "text-warning mt-2";
+                                            ? "active" 
+                                            : "no-active";
 
   return (
     <Navbar expand="lg" bg="dark" variant="dark" fixed="top">
