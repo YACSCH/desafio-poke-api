@@ -3,12 +3,12 @@ import pikachu from '../img/pikachu.png'
 
 const Home = () => {
   return (
-    <>
-    <Container className='m-3'>
+   
+    <div className='pokemon-list'>
         <h1>Bienvenido Maestro pokemon</h1>
         <img src= { pikachu } alt="Imagen de pikachu color amarillo" />
-    </Container>
-    </>
+    </div>
+  
     
   )
 }

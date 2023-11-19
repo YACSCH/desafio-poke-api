@@ -5,7 +5,7 @@ import Card from "../components/Card";
 export default function PokemonDetail() {
   const { name } = useParams();
 
-  const [pokeData, setPokeData] = useState(null);
+  const [pokeData, setPokeData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -15,7 +15,6 @@ export default function PokemonDetail() {
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
         const data = await res.json();
         setPokeData(data);
-        console.log(data)
         setLoading(false); 
       } catch (error) {
         console.error("Error fetching Pokemon data:", error);
@@ -25,7 +24,7 @@ export default function PokemonDetail() {
 
     getPokemonDetail();
 
-  }, [name]); 
+  }, []); 
 
   if (loading) {
     return <div>Cargando...</div>;
@@ -36,8 +35,8 @@ export default function PokemonDetail() {
   }
 
   return (
-    <div>
-      {/* <Card data={pokeData} /> */}
+    <div className='card-item'>
+       <Card pokeData = {pokeData}  /> 
     </div>
   );
 }
